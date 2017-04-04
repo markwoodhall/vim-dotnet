@@ -26,6 +26,11 @@ if len(slnfiles) == 0
     let filedir = filedirparts[0]
     let projfiles = split(glob(filedir . '/*.csproj'), '\n')
   endwhile
+
+  if len(projfiles) == 0
+      echomsg 'Unable to find a .sln or .csproj file, either of which is required in order to call the `dotnet build` command.'
+      finish
+  endif
 endif
 
 let $buildPath = len(slnfiles) > 0 ? slnfiles[0] : projfiles[0]
