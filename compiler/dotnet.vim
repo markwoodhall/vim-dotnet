@@ -29,7 +29,7 @@ if len(slnfiles) == 0
   endwhile
 
   if len(projfiles) == 0
-      echomsg 'Unable to find a .sln or .csproj file, either of which is required in order to call the `dotnet build` command.'
+      silent echomsg 'Unable to find a .sln or .csproj file, either of which is required in order to call the `dotnet build` command.'
       finish
   endif
 endif
