@@ -1,11 +1,11 @@
 if exists("current_compiler")
   finish
 endif
-let current_compiler = "rmsb"
+let current_compiler = "msbuild"
 
 let s:cpo_save = &cpo
 set cpo-=C
-CompilerSet makeprg=rmsb
+CompilerSet makeprg=msbuild
 CompilerSet errorformat=\ %#%f(%l\\\,%c):\ %m
 
 let &cpo = s:cpo_save
