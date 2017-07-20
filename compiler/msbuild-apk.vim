@@ -25,7 +25,7 @@ let s:cpo_save = &cpo
 set cpo-=C
 
 CompilerSet makeprg=msbuild-apk\ $buildPath
-CompilerSet errorformat=\ %#%f(%l):\ %t%.%#:\ %m
+CompilerSet errorformat=\ %#%f(%l\\\,%c):\ %t%.%#:\ %m
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
